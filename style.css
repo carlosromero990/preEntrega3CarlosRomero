@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+header ul {
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(128, 128, 128, 0.212);
+
+  display: flex;
+  justify-content: space-around;
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+main {
+  display: flex;
+}
+main section {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+}
+main section article {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.tituloProducto {
+  font-weight: bold;
+}
+main section article img {
+  width: 40%;
+  border-radius: 20px;
+}
+
+main aside {
+  width: 20%;
+  background-color: rgba(0, 128, 0, 0.253);
+  text-align: center;
+  border-radius: 20px;
+  margin: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main aside button {
+  display: inline;
+  width: 50%;
+}
