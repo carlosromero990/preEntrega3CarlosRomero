@@ -88,7 +88,8 @@ botonVaciarCarrito.addEventListener("click", vaciarCarrito);
 ------------------------------------------------------------------------------------*/
 const botonPagar = document.getElementById("botonPagar");
 botonPagar.addEventListener("click", mensajeGracias);
-/*
- */
-/*
- */
+//
+//
+//
+//
+//
