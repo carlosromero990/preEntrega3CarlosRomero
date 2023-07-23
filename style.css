@@ -57,11 +57,20 @@ main aside {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
-
-main aside button {
-  display: inline;
-  width: 50%;
+.botones {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  justify-content: space-around;
+}
+.botones button {
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main aside div ul {
+  list-style: none;
 }

@@ -57,10 +57,17 @@
       <!-- --------OPCIONES DEL CARRITO -->
       <!-- ------------------------------------------------------------------- -->
       <aside>
-        <button id="botonCarrito">Mostar Carrito</button>
-        <button id="botonVaciarCarrito">Vaciar Carrito</button>
-        <button id="botonTotal">Ver Total</button>
-        <button id="botonPagar">Pagar</button>
+        <div class="botones">
+          <button id="botonVaciarCarrito">Vaciar Carrito</button>
+          <button id="botonPagar">Pagar</button>
+        </div>
+        <div>
+          <h2>Tu carrito</h2>
+          <br />
+          <ul id="listaCarrito"></ul>
+          <br />
+          <p>El total de tu compra es $<span id="totalDeCompraCarrito">0</span></p>
+        </div>
       </aside>
     </main>
 
