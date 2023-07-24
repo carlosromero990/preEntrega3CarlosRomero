@@ -25,14 +25,20 @@ let totalCompra = 0;
 function inicioLogin() {
   const nombreUsuario = prompt("Ingrese su nombre de usuario");
   const contraseñaUsuario = prompt("Ingrese su contraseña");
-  if (nombreUsuario && contraseñaUsuario) {
-    localStorage.setItem("usuario", nombreUsuario);
-    localStorage.setItem("contraseña", contraseñaUsuario);
-    liLogin.style.display = "none";
-    liBienvenida.style.display = "block";
-    pBienvenida.textContent = `Hola ${nombreUsuario}`;
+  const contraseñaUsuario2 = prompt("Confirme su contraseña");
+  if (contraseñaUsuario === contraseñaUsuario2) {
+    if (nombreUsuario && contraseñaUsuario) {
+      localStorage.setItem("usuario", nombreUsuario);
+      localStorage.setItem("contraseña", contraseñaUsuario);
+      liLogin.style.display = "none";
+      liBienvenida.style.display = "block";
+      pBienvenida.textContent = `Hola ${nombreUsuario}`;
+      botonPagar.style.display = "block";
+    } else {
+      alert("Porfavor ingrese su nombre de usuario o contraseña");
+    }
   } else {
-    alert("Porfavor ingrese su nombre de usuario o contraseña");
+    alert("Las contraseñas no coinciden");
   }
 }
 
@@ -42,6 +48,7 @@ function salidaLogin() {
   liLogin.style.display = "block";
   liBienvenida.style.display = "none";
   pBienvenida.textContent = "";
+  botonPagar.style.display = "none";
 }
 
 /* ------------------------------------------------------------------------------------
