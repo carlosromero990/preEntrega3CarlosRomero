@@ -1,3 +1,10 @@
+/* ------------------------------------------------------------------------------------
+        CONST DE INICIO DE SESION
+------------------------------------------------------------------------------------*/
+const liLogin = document.getElementById("login");
+const liBienvenida = document.getElementById("bienvenida");
+const pBienvenida = document.getElementById("mensajeBienvenida");
+
 /*---------------------------------------------------------------------------------- 
           ARRAY DE PRODUCTOS
 ------------------------------------------------------------------------------------*/
@@ -10,6 +17,33 @@ const todosProductos = [
 
 const carrito = [];
 let totalCompra = 0;
+
+/* ------------------------------------------------------------------------------------
+        FUNCION PARA INICIO Y SALIDA DE SESION 
+------------------------------------------------------------------------------------*/
+
+function inicioLogin() {
+  const nombreUsuario = prompt("Ingrese su nombre de usuario");
+  const contraseñaUsuario = prompt("Ingrese su contraseña");
+  if (nombreUsuario && contraseñaUsuario) {
+    localStorage.setItem("usuario", nombreUsuario);
+    localStorage.setItem("contraseña", contraseñaUsuario);
+    liLogin.style.display = "none";
+    liBienvenida.style.display = "block";
+    pBienvenida.textContent = `Hola ${nombreUsuario}`;
+  } else {
+    alert("Porfavor ingrese su nombre de usuario o contraseña");
+  }
+}
+
+function salidaLogin() {
+  localStorage.removeItem("usuario");
+  localStorage.removeItem("contraseña");
+  liLogin.style.display = "block";
+  liBienvenida.style.display = "none";
+  pBienvenida.textContent = "";
+}
+
 /* ------------------------------------------------------------------------------------
         FUNCION PARA AGREGAR AL CARRITO
 ------------------------------------------------------------------------------------*/
@@ -65,6 +99,14 @@ function mensajeGracias() {
 ------------------------------------------------------------------------------------*/
 
 /* ------------------------------------------------------------------------------------
+        EVENTO PARA INICIO Y SALIDA DE SESION
+------------------------------------------------------------------------------------*/
+const btnLogin = document.getElementById("botonLogin");
+btnLogin.addEventListener("click", inicioLogin);
+const btnSalida = document.getElementById("botonSalida");
+btnSalida.addEventListener("click", salidaLogin);
+
+/* ------------------------------------------------------------------------------------
         EVENTO AGREGAR PRODUCTOS AL CARRITO
 ------------------------------------------------------------------------------------*/
 const botonAgregar = document.querySelectorAll(".agregarAlCarrito");
@@ -88,8 +130,3 @@ botonVaciarCarrito.addEventListener("click", vaciarCarrito);
 ------------------------------------------------------------------------------------*/
 const botonPagar = document.getElementById("botonPagar");
 botonPagar.addEventListener("click", mensajeGracias);
-//
-//
-//
-//
-//
