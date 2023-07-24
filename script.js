@@ -49,6 +49,7 @@ function salidaLogin() {
   liBienvenida.style.display = "none";
   pBienvenida.textContent = "";
   botonPagar.style.display = "none";
+  vaciarCarrito();
 }
 
 /* ------------------------------------------------------------------------------------
