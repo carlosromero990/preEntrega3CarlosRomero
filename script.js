@@ -139,5 +139,4 @@ const botonPagar = document.getElementById("botonPagar");
 botonPagar.addEventListener("click", mensajeGracias);
 
 //
-//
 // ESPERO LES GUSTE
